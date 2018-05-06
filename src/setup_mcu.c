@@ -4,5 +4,5 @@
 
 void Setup_MCU(void){
     DDRB = 0xFF;
-    PORTB = 0xAA;
+    PORTB = 0x00;
 }
