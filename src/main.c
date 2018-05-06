@@ -7,6 +7,7 @@ int main (void)
 	for (;;)
 	{
 		a++;
+		a--;
 	}
 	return 0;
 }
