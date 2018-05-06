@@ -1,13 +1,12 @@
-#include <avr/io.h>
+#include "hdr/setup_mcu.h"
 
 int main (void)
 {
-	DDRD = 0xFF;
-	uint8_t a=0;
+	Setup_MCU();
+	unsigned short int a = 0;
 	for (;;)
 	{
 		a++;
-		PORTD = a;
 	}
 	return 0;
 }

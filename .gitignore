@@ -7,4 +7,8 @@ doc/
 *.map
 *.o
 *.sym
+*.pdsbak
+*.workspace
+
 src/.dep/
+.vscode/
