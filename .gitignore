@@ -9,6 +9,9 @@ doc/
 *.sym
 *.pdsbak
 *.workspace
+*.code-workspace
+*.sublime-project
+*.sublime-workspace
 
 src/.dep/
 .vscode/
