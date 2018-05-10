@@ -80,7 +80,7 @@ OBJDIR = .
 
 
 # List C source files here. (C dependencies are automatically generated.)
-SRC = $(TARGET).c setup_mcu.c timer.c adc_lib.c
+SRC = $(TARGET).c setup_mcu.c timer.c adc_lib.c buttons.c
 
 
 # List C++ source files here. (C dependencies are automatically generated.)
