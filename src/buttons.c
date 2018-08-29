@@ -1,7 +1,7 @@
 // ПЛАТФОРМОЗАВИСИМАЯ ЧАСТЬ 
 #include <avr/io.h>
 #include <avr/iom8.h>
-#include "hdr/buttons.h"
+#include "buttons.h"
 
 
 void Init_buttons(void)

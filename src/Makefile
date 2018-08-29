@@ -80,7 +80,7 @@ OBJDIR = .
 
 
 # List C source files here. (C dependencies are automatically generated.)
-SRC = $(TARGET).c setup_mcu.c timer.c adc_lib.c buttons.c
+SRC = $(TARGET).c setup_mcu.c timer.c adc_lib.c buttons.c ssd1306.c twi_lib.c
 
 
 # List C++ source files here. (C dependencies are automatically generated.)
@@ -114,7 +114,7 @@ DEBUG = dwarf-2
 #     Each directory must be seperated by a space.
 #     Use forward slashes for directory separators.
 #     For a directory that has spaces, enclose it in quotes.
-EXTRAINCDIRS = 
+EXTRAINCDIRS = hdr/
 
 
 # Compiler flag to set the C Standard level.

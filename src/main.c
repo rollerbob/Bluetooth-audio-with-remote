@@ -1,7 +1,7 @@
 #include <avr/io.h>
-#include "hdr/setup_mcu.h"
-#include "hdr/timer.h"
-#include "hdr/buttons.h"
+#include "setup_mcu.h"
+#include "timer.h"
+#include "buttons.h"
 
 int main (void)
 {

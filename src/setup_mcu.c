@@ -1,10 +1,11 @@
 #include <avr/io.h>
 #include <avr/iom8.h>
 #include <avr/interrupt.h>
-#include "hdr/setup_mcu.h"
-#include "hdr/buttons.h"
-#include "hdr/timer.h"
-#include "hdr/adc_lib.h"
+#include "setup_mcu.h"
+#include "buttons.h"
+#include "timer.h"
+#include "adc_lib.h"
+#include "ssd1306.h"
 
 void Setup_MCU(void){
 //Запрет прерываний на время инициализации
@@ -20,8 +21,10 @@ void Setup_MCU(void){
 
 //Настройка UART
 //  Init_UART();
+
 //Настройка дисплея
-//  Init_lcd();
+    Init_lcd();
+
 //Теперь прерывания разрешены
     sei();
 }

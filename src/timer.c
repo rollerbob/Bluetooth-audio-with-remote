@@ -4,7 +4,7 @@
 #include <avr/io.h>
 #include <avr/iom8.h>
 #include <avr/interrupt.h>
-#include "hdr/timer.h"
+#include "timer.h"
 
 volatile uint8_t frame;
 

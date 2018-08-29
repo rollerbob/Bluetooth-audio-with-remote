@@ -3,7 +3,7 @@
 #include <avr/interrupt.h>
 #include <avr/io.h>
 #include <avr/iom8.h>
-#include "hdr/adc_lib.h"
+#include "adc_lib.h"
 
 volatile uint8_t key1;
 volatile uint8_t key2;
