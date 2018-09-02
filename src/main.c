@@ -1,7 +1,9 @@
 #include <avr/io.h>
+#include <util/delay.h>
 #include "setup_mcu.h"
 #include "timer.h"
 #include "buttons.h"
+#include "twi_lib.h"
 
 int main (void)
 {
@@ -9,7 +11,7 @@ int main (void)
 
 	for (;;)
 	{
-		Set_button(VOLUME_UP, ON);
+		;
 	}
 	return 0;
 }

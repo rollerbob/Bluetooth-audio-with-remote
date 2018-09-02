@@ -11,7 +11,7 @@ volatile uint8_t frame;
 void Init_timer (void)
 {
     frame = 0;
-    TCCR2 = (1 << WGM21) | (1 << CS22);
+    TCCR2 = (1 << WGM21) | (1 << CS22) | (1 << CS21) | (1 << CS20);
     TIMSK = 1 << OCIE2;
     OCR2 = FRAME_RATE;
 }

@@ -1,12 +1,13 @@
 //ПЛАТФОРМОЗАВИСИМАЯ ЧАСТЬ
 
 #include <avr/io.h>
+#include <stdlib.h>
 #include <avr/interrupt.h>
 #include "twi_lib.h"
 
 //Используемые переменные
-volatile uint8_t *_msg;
-volatile uint8_t _msg_size;
+uint8_t *_msg;
+uint8_t _msg_size;
 volatile uint8_t twi_state = TWI_NO_STATE;
 
 void Twi_init(void)
@@ -17,9 +18,15 @@ void Twi_init(void)
 	TWCR = 1 << TWEN;
 }
 
+
 void Twi_send(uint8_t *msg, uint8_t msg_size)
 {
-	_msg = msg;
+	_msg = malloc(msg_size);
+	uint8_t i;
+	for (i = 0; i < msg_size; i++)
+	{
+		_msg[i] = msg[i];
+	}
 	_msg_size = msg_size;
 	//Состояние TWI-модуля - занят
 	twi_state = TWI_BUSY;
@@ -51,6 +58,7 @@ ISR (TWI_vect)
 			} else 
 			{
 				twi_state = TWI_SUCCESS;
+				free(_msg);
 				TWCR = 1 << TWEN | 1 << TWINT | 1 << TWSTO | 0 << TWIE;
 			}
 		break;
