@@ -1,12 +1,11 @@
 //ПЛАТФОРМОЗАВИСИМАЯ ЧАСТЬ
 
 #include <avr/io.h>
-#include <stdlib.h>
 #include <avr/interrupt.h>
 #include "twi_lib.h"
 
 //Используемые переменные
-uint8_t *_msg;
+volatile uint8_t _msg[256];
 uint8_t _msg_size;
 volatile uint8_t twi_state = TWI_NO_STATE;
 
@@ -21,7 +20,6 @@ void Twi_init(void)
 
 void Twi_send(uint8_t *msg, uint8_t msg_size)
 {
-	_msg = malloc(msg_size);
 	uint8_t i;
 	for (i = 0; i < msg_size; i++)
 	{
@@ -33,6 +31,11 @@ void Twi_send(uint8_t *msg, uint8_t msg_size)
 
 	//Запускаю передачу!
 	TWCR = 1 << TWEN | 1 << TWIE | 1 << TWINT | 1 << TWSTA;
+}
+
+uint8_t Get_twi_status(void)
+{
+	return twi_state;
 }
 
 ISR (TWI_vect)
@@ -58,7 +61,6 @@ ISR (TWI_vect)
 			} else 
 			{
 				twi_state = TWI_SUCCESS;
-				free(_msg);
 				TWCR = 1 << TWEN | 1 << TWINT | 1 << TWSTO | 0 << TWIE;
 			}
 		break;

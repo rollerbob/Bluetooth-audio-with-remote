@@ -49,5 +49,6 @@
 *******************************************************************************/
 void Twi_init(void);
 void Twi_send(uint8_t *msg, uint8_t msg_size);
+uint8_t Get_twi_status(void);
 
 #endif
