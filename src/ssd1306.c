@@ -44,13 +44,11 @@ void Init_lcd(void)
 	Twi_init();
 
 	uint8_t i = 0;
-	uint8_t *c = init_codes;
 	while (i < 21)
 	{
 		if (Get_twi_status() != TWI_BUSY) 
 		{
-			Send_command(pgm_read_byte(c));
-			c++;
+			Send_command(pgm_read_byte(&init_codes[i]));
 			i++;
 		}
 	}
