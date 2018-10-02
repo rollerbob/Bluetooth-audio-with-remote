@@ -1,0 +1,99 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A2 23386 16535
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Project_lib:CSR8645 M?
+U 1 1 5BB3EBA4
+P 11850 7750
+F 0 "M?" H 11850 9415 50  0000 C CNN
+F 1 "CSR8645" H 11850 9324 50  0000 C CNN
+F 2 "" H 11800 8600 50  0001 C CNN
+F 3 "" H 11800 8600 50  0001 C CNN
+	1    11850 7750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5BB3EC38
+P 10650 7250
+F 0 "R?" V 10443 7250 50  0000 C CNN
+F 1 "R" V 10534 7250 50  0000 C CNN
+F 2 "" V 10580 7250 50  0001 C CNN
+F 3 "~" H 10650 7250 50  0001 C CNN
+	1    10650 7250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5BB3ED45
+P 10650 7350
+F 0 "R?" V 10443 7350 50  0000 C CNN
+F 1 "R" V 10534 7350 50  0000 C CNN
+F 2 "" V 10580 7350 50  0001 C CNN
+F 3 "~" H 10650 7350 50  0001 C CNN
+	1    10650 7350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10900 7250 10800 7250
+Wire Wire Line
+	10900 7350 10800 7350
+$Comp
+L MCU_Microchip_ATmega:ATmega8-16AU U?
+U 1 1 5BB3EDBA
+P 11800 11250
+F 0 "U?" H 11800 12928 50  0000 C CNN
+F 1 "ATmega8-16AU" H 11800 12837 50  0000 C CNN
+F 2 "Package_QFP:TQFP-32_7x7mm_P0.8mm" H 11800 11250 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2486-8-bit-avr-microcontroller-atmega8_l_datasheet.pdf" H 11800 11250 50  0001 C CNN
+	1    11800 11250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5BB3EF3B
+P 10750 8100
+F 0 "#PWR?" H 10750 7850 50  0001 C CNN
+F 1 "GND" H 10755 7927 50  0000 C CNN
+F 2 "" H 10750 8100 50  0001 C CNN
+F 3 "" H 10750 8100 50  0001 C CNN
+	1    10750 8100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10900 7950 10750 7950
+Wire Wire Line
+	10750 7950 10750 8100
+$Comp
+L power:GND #PWR?
+U 1 1 5BB3EFA8
+P 11800 12950
+F 0 "#PWR?" H 11800 12700 50  0001 C CNN
+F 1 "GND" H 11805 12777 50  0000 C CNN
+F 2 "" H 11800 12950 50  0001 C CNN
+F 3 "" H 11800 12950 50  0001 C CNN
+	1    11800 12950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11800 12950 11800 12850
+Wire Wire Line
+	11800 12850 11900 12850
+Wire Wire Line
+	11900 12850 11900 12750
+Connection ~ 11800 12850
+Wire Wire Line
+	11800 12850 11800 12750
+$EndSCHEMATC
