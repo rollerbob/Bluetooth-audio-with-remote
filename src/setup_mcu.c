@@ -1,5 +1,4 @@
 #include <avr/io.h>
-#include <avr/iom8.h>
 #include <avr/interrupt.h>
 #include "setup_mcu.h"
 #include "buttons.h"
@@ -20,7 +19,7 @@ void Setup_MCU(void){
     Init_timer();
 
 //Настройка UART
-//  Init_UART();
+//    Init_UART();
 
 //Настройка дисплея
 
