@@ -11,7 +11,10 @@ int main (void)
 
 	for (;;)
 	{
-		;
+		_delay_ms (500);
+		PORTB = 0b10000000;
+		_delay_ms (500);
+		PORTB = 0;
 	}
 	return 0;
 }
