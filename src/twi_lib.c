@@ -6,7 +6,7 @@
 
 //Используемые переменные
 volatile uint8_t _msg[256];
-uint8_t _msg_size;
+volatile uint8_t _msg_size;
 volatile uint8_t twi_state = TWI_NO_STATE;
 
 void Twi_init(void)

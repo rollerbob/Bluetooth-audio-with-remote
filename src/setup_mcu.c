@@ -25,5 +25,5 @@ void Setup_MCU(void){
 
 //Теперь прерывания разрешены
     sei();
-//    Init_lcd();
+    Init_lcd();
 }
