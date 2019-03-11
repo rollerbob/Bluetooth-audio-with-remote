@@ -19,18 +19,19 @@ int main (void)
 {
 	Setup_MCU();
 
-	LCD_print_str ("Key = ");
-	LCD_Set_pos (0,1);
-	LCD_print_str ("Cmd = ");
+	LCD_print_str (0, 0, "Key = ");
+	LCD_print_str (0, 1, "Cmd = ");
 
 	for (;;)
 	{
+		Update_lcd();
+
 		uint8_t key = Get_key();
 		cmd = Parse_cmd(key);
 		LCD_Set_pos(6,0);
-		LCD_print_hex(key);
+		LCD_print_hex(0xFF);
 		LCD_Set_pos(6,1);
-		LCD_print_hex(cmd);
+		LCD_print_hex(0x15);
 		switch (cmd)
 		{
 			case MODE_CMD:
