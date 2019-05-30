@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP CSR8645
+D CSR8645 Bluetooth 4.0 APT-X module
+K bluetooth
+$ENDCMP
+#
+#End Doc Library
