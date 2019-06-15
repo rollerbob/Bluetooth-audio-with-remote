@@ -1,4 +1,5 @@
 #include <avr/io.h>
+#include <avr/iom8.h>
 #include <util/delay.h>
 #include "main.h"
 #include "setup_mcu.h"
@@ -8,10 +9,10 @@
 #include "ssd1306.h"
 #include "adc_lib.h"
 
-// Р’РЅСѓС‚СЂРµРЅРЅРёРµ С„СѓРЅРєС†РёРё
+// Внутренние функции
 uint8_t Parse_cmd (uint8_t chnl);
 
-// Р“Р»РѕР±Р°Р»СЊРЅС‹Рµ РїРµСЂРµРјРµРЅРЅС‹Рµ
+// Глобальные переменные
 uint8_t cmd = NONE_CMD;
 uint8_t toggle = 0;
 
